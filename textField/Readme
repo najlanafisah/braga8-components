@@ -1,0 +1,7 @@
+buat email sama passwordnya masih belum ada validasi yaa. Jadi nanti bisa tambahin validasi biar emailnya harus ada tulisan @gmail.com.
+Terus buat password ada minimal 6 karakter biar ga asal kasih password
+
+Nanti output komponennya ada tiga
+1. Email (ini khusus email aja)
+2. Password (ini juga khusus password)
+3. Full Name (ini bisa dipake buat text biasa, tinggal di ganti2 aja)
