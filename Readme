@@ -4,4 +4,5 @@
 ```
    font-family: -apple-system BlinkMacSystemFont, "SF Pro Display" "Segoe UI", Roboto, sans-serif;
 ```
-- 
+- Jnagan lupa bikin validasi buat email (harus ada @gmail.com)
+- Jangan lupa bikin validasi buat passwordbiar maksimal 4/6
