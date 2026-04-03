@@ -1,0 +1,7 @@
+### Note dari lalakQ=
+
+- Jangan lupa hapus font family ya bestih yang ini
+```
+   font-family: -apple-system BlinkMacSystemFont, "SF Pro Display" "Segoe UI", Roboto, sans-serif;
+```
+- 
