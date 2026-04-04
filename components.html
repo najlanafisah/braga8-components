@@ -51,6 +51,166 @@
         <button class="btn-glass">Login</button>
     </div>
 
+    <!-- CARD -->
+    <div class="card-container">
+        <div class="card">
+            <p class="card-label">Total Tenant</p>
+            <p class="card-value">128</p>
+            <p class="card-caption">+3 at January</p>
+        </div>
+        <div class="card">
+            <p class="card-label">Total Tagihan Bulan Ini</p>
+            <p class="card-value">↑13%</p>
+            <p class="card-caption">January</p>
+        </div>
+        <div class="card">
+            <p class="card-label">Belum Dibayar</p>
+            <p class="card-value">34</p>
+            <p class="card-caption">Invoices</p>
+        </div>
+        <div class="card">
+            <p class="card-label">Komplain Aktif</p>
+            <p class="card-value">8</p>
+            <p class="card-caption">Cases</p>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <p class="card-label">Billing Overview</p>
+            <div class="chart">
+                <div class="pie-chart" id="chart"></div>
+
+                <div class="chart-info">
+                    <div class="item">
+                        <span class="dot paid"></span>
+                        <div>
+                            <p>Paid</p>
+                            <h2 id="paid">65%</h2> <!-- ini bisa di ganti yaa-->
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span class="dot unpaid"></span>
+                        <div>
+                            <p>Unpaid</p>
+                            <h2 id="unpaid">25%</h2> <!-- ini bisa di ganti yaa-->
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span class="dot overdue"></span>
+                        <div>
+                            <p>Overdue</p>
+                            <h2 id="overdue">10%</h2> <!-- ini bisa di ganti yaa-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <p class="card-label">Input Meter Hari Ini</p>
+            <div class="metric">
+                <span class="card-value">46</span> <!-- nanti ini isi yang bulan ini-->
+                <span class="metric-max">/68</span> <!-- nah kalo ini yangbuat bulan sebelumnya-->
+                <span class="card-caption">Unit</span>
+            </div>
+            <button class="light-brown-btn">Audit Logs →</button>
+        </div>
+
+        <div class="card bar-chart-container">
+
+            <!-- CHART -->
+            <div class="bar-chart-content">
+                <p class="card-label">Monthly Usage Chart</p>
+
+                <div class="bar-chart-wrapper">
+                    <div class="bar-chart-grid"></div>
+                    <div class="bar-chart-bars" id="chart-bars"></div>
+                </div>
+
+                <div class="bar-chart-labels" id="chart-labels"></div>
+            </div>
+
+            <!-- LEGEND -->
+            <div class="bar-chart-legend">
+                <div class="bar-chart-legend-item">
+                    <span class="bar-chart-legend-color electricity"></span>
+                    <span>Electricity</span>
+                </div>
+                <div class="bar-chart-legend-item">
+                    <span class="bar-chart-legend-color water"></span>
+                    <span>Water</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <p class="card-label">Quick Actions</p>
+            <div class=" button-wrapper">
+                <button class="dark-brown-button">
+                    <span>+</span>
+                    <span>Generate Tagihan</span>
+                </button>
+                <button class="dark-brown-button">
+                    <span>+</span>
+                    <span>Generate Tagihan</span>
+                </button>
+                <button class="dark-brown-button">
+                    <span>+</span>
+                    <span>Generate Tagihan</span>
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            <h2 class="card-label">Monthly Usage</h2>
+
+            <div class="card-scroll">
+                <table class="usage-table">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Electricity</th>
+                            <th>Water Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>12,000 kWh</td>
+                            <td>12,000 L</td>
+                        </tr>
+                        <tr>
+                            <td>January</td>
+                            <td>12,000 kWh</td>
+                            <td>12,000 L</td>
+                        </tr>
+                        <tr>
+                            <td>January</td>
+                            <td>12,000 kWh</td>
+                            <td>12,000 L</td>
+                        </tr>
+                        <tr>
+                            <td>January</td>
+                            <td>12,000 kWh</td>
+                            <td>12,000 L</td>
+                        </tr>
+                        <tr>
+                            <td>January</td>
+                            <td>12,000 kWh</td>
+                            <td>12,000 L</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
