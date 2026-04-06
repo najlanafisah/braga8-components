@@ -462,15 +462,6 @@
     overflow-y: auto;
 }
 
-.sidebar::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent 65%, rgba(0, 0, 0, 0.4) 100%);
-    z-index: 2;
-    pointer-events: none;
-}
-
 .sidebar-logo {
     margin-bottom: 2rem;
     z-index: 3;
