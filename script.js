@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const { paid, unpaid, overdue } = billData;
 
     const chart = document.getElementById("chart");
-
     if (!chart) {
       console.log("PIE CHART GA KETEMU");
       return;
@@ -53,30 +52,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const barsContainer = document.getElementById("chart-bars");
   const labelsContainer = document.getElementById("chart-labels");
 
-  console.log("barsContainer:", barsContainer);
-  console.log("labelsContainer:", labelsContainer);
-
-  // ❗ kalau null, stop di sini
   if (!barsContainer || !labelsContainer) {
     console.log("ELEMENT BAR CHART GA KETEMU");
     return;
   }
 
-  // ambil semua nilai
   const values = [];
   data.forEach(d => {
     values.push(d.electricity, d.water);
   });
 
   const maxValue = Math.max(...values);
-  console.log("MAX:", maxValue);
 
   if (!maxValue) {
     console.log("MAX VALUE ERROR");
     return;
   }
 
-  // render bar
   data.forEach(item => {
 
     const group = document.createElement("div");
@@ -88,8 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const wBar = document.createElement("div");
     wBar.className = "bar-chart-bar bar-chart-bar-water";
 
-    // tinggi
-    const chartHeight = 160; // sesuai tinggi container kamu
+    const chartHeight = 160;
 
     eBar.style.height = (item.electricity / maxValue) * chartHeight + "px";
     wBar.style.height = (item.water / maxValue) * chartHeight + "px";
@@ -98,10 +89,38 @@ document.addEventListener("DOMContentLoaded", () => {
     group.appendChild(wBar);
     barsContainer.appendChild(group);
 
-    // label
     const label = document.createElement("div");
     label.textContent = item.month;
     labelsContainer.appendChild(label);
   });
+
+  // ======================
+  // POPUP
+  // ======================
+  const popup = document.querySelector(".popup");
+  const openBtn = document.querySelector(".open-popup"); // tombol trigger
+  const closeBtn = document.querySelector(".popup-close");
+  const overlay = document.querySelector(".popup-overlay");
+
+  // buka popup
+  if (openBtn && popup) {
+    openBtn.addEventListener("click", () => {
+      popup.classList.add("active");
+    });
+  }
+
+  // tutup popup (X)
+  if (closeBtn && popup) {
+    closeBtn.addEventListener("click", () => {
+      popup.classList.remove("active");
+    });
+  }
+
+  // tutup popup (klik overlay)
+  if (overlay && popup) {
+    overlay.addEventListener("click", () => {
+      popup.classList.remove("active");
+    });
+  }
 
 });

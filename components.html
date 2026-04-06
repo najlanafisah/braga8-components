@@ -158,11 +158,11 @@
                 </button>
                 <button class="dark-brown-button">
                     <span>+</span>
-                    <span>Generate Tagihan</span>
+                    <span>Add Tenant</span>
                 </button>
                 <button class="dark-brown-button">
                     <span>+</span>
-                    <span>Generate Tagihan</span>
+                    <span>Edit Tarif</span>
                 </button>
             </div>
         </div>
@@ -291,6 +291,292 @@
 
         </nav>
     </aside>
+
+    <!-- POP UP CARD -->
+    <div class="popup">
+        <div class="popup-overlay"></div>
+
+        <div class="popup-card">
+            <button class="popup-close">&times;</button>
+
+            <div class="popup-header">Title</div>
+            <div class="popup-body">
+                <div class="text-field">
+                    <label class="text-field-label">Name</label>
+                    <input type="text" class="text-field-input" placeholder="name">
+                </div>
+                <div class="text-field">
+                    <label class="text-field-label">Username</label>
+                    <input type="text" class="text-field-input" placeholder="username">
+                </div>
+                <div class="text-field">
+                    <label class="text-field-label">Email</label>
+                    <input type="email" class="text-field-input" placeholder="your@email.com">
+                </div>
+            </div>
+            <button class="light-brown-btn">Update Account Information</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- BUTTON BUAT BUKKA POP UP (NANTI PAKE CLASS INI YA KLO MAU POPUP) -->
+    <button class="open-popup">Pop Up Card Button</button>
+
+    <!-- TABLE -->
+    <div class="table-card">
+
+        <div class="table-card-header">
+            <div class="table-card-title">
+                <span class="label">Tenant:</span>
+                <span class="value">Burger Bangor</span>
+            </div>
+
+            <div class="table-card-meta">
+                2 Units
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Unit</th>
+                    <th>Floor</th>
+                    <th>Area Size (m2)</th>
+                    <th>Status</th>
+                    <th>Lease Start</th>
+                    <th>Lease End</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>2A</td>
+                    <td>2</td>
+                    <td>2.00</td>
+                    <td>
+                        <button class="light-green-status-btn">Active</button>
+                    </td>
+                    <td>2/26/2026</td>
+                    <td>2/26/2027</td>
+                    <td>(Action Buttons)</td> <!-- ini nanit diisi sama btn action yang dibikin sama ekkin-->
+                </tr>
+                <tr>
+                    <td>2A</td>
+                    <td>2</td>
+                    <td>2.00</td>
+                    <td>
+                        <button class="light-green-status-btn">Active</button>
+                    </td>
+                    <td>2/26/2026</td>
+                    <td>2/26/2027</td>
+                    <td>(Action Buttons)</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="table-card">
+
+        <div class="table-card-header">
+            <div class="table-card-title">
+                <span class="label">Tenant:</span>
+                <span class="value">Burger Bangor</span>
+            </div>
+
+            <div class="table-card-meta">
+                2 Units
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Unit</th>
+                    <th>Meter Number</th>
+                    <th>AType</th>
+                    <th>Capacity</th>
+                    <th>Tariff Type</th>
+                    <th>Meter Category</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>2A</td>
+                    <td>12</td>
+                    <td>
+                        <button class="blue-type-btn">Water</button>
+                    </td>
+                    <td>200 KHW</td>
+                    <td>Normal</td>
+                    <td>Pascabayar</td>
+                    <td>(Action Buttons)</td> <!-- ini nanit diisi sama btn action yang dibikin sama ekkin-->
+                </tr>
+                <tr>
+                    <td>2A</td>
+                    <td>12</td>
+                    <td>
+                        <button class="yellow-type-btn">Electricity</button>
+                    </td>
+                    <td>2000 L</td>
+                    <td>Normal</td>
+                    <td>Pascabayar</td>
+                    <td>(Action Buttons)</td> <!-- ini nanit diisi sama btn action yang dibikin sama ekkin-->
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="table-card">
+
+        <div class="table-card-header">
+            <div class="table-card-title">
+                <span class="label">Tenant:</span>
+                <span class="value">Burger Bangor</span>
+            </div>
+
+            <div class="table-card-meta">
+                2 Units
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Invoice No</th>
+                    <th>Unit</th>
+                    <th>Total</th>
+                    <th>Month</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>INV-1771741827</td>
+                    <td>2A</td>
+                    <td>Rp 1300,000</td>
+                    <td>January 2026</td>
+                    <td>
+                        <button class="dark-green-status-btn">✓ Send to Tenant</button>
+                    </td>
+                    <td>(Action Buttons)</td> <!-- ini nanit diisi sama btn action yang dibikin sama ekkin-->
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="table-card">
+
+        <div class="table-card-header">
+            <div class="table-card-title">
+                <span class="label">Admin Users</span>
+            </div>
+
+            <div class="table-card-meta">
+                2 Users
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Quaneisha</td>
+                    <td>@Quaneisha</td>
+                    <td>quan@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="table-card">
+
+        <div class="table-card-header">
+            <div class="table-card-title">
+                <span class="value">History</span>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Activity</th>
+                    <th>Done At</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Quaneisha</td>
+                    <td>Admin</td>
+                    <td>Edit User ‘Jimmy’ Information</td>
+                    <td>8 PM 3/10/2026</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Quaneisha</td>
+                    <td>Admin</td>
+                    <td>Edit User ‘Jimmy’ Information</td>
+                    <td>8 PM 3/10/2026</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Quaneisha</td>
+                    <td>Admin</td>
+                    <td>Edit User ‘Jimmy’ Information</td>
+                    <td>8 PM 3/10/2026</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Quaneisha</td>
+                    <td>Admin</td>
+                    <td>Edit User ‘Jimmy’ Information</td>
+                    <td>8 PM 3/10/2026</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Quaneisha</td>
+                    <td>Admin</td>
+                    <td>Edit User ‘Jimmy’ Information</td>
+                    <td>8 PM 3/10/2026</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Quaneisha</td>
+                    <td>Admin</td>
+                    <td>Edit User ‘Jimmy’ Information</td>
+                    <td>8 PM 3/10/2026</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Quaneisha</td>
+                    <td>Admin</td>
+                    <td>Edit User ‘Jimmy’ Information</td>
+                    <td>8 PM 3/10/2026</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -38,8 +38,10 @@
 }
 
 .text-field-input {
-    width: 100%;
     padding: 1rem 1.2rem;
+    width: 100%;
+    min-width: 26rem;
+    box-sizing: border-box;
     border: none;
     border-radius: 1rem;
     background: #E5D0C9;
@@ -51,7 +53,6 @@
 .text-field-input:focus {
     outline: none;
     box-shadow: 0 3.5px 14px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
 }
 
 /* FORGOT & OPTION */
@@ -160,7 +161,7 @@
 }
 
 .card-label {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 500;
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -190,7 +191,7 @@
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
-    border: .1rem solid white;
+    border: .05rem solid white;
 }
 
 .chart-info .item {
@@ -249,8 +250,8 @@
     padding: 1rem;
     width: 100%;
     border-radius: 1rem;
-    border: 0.1rem solid #e4e4e4;
-    font-size: 1.2rem;
+    border: 0.05rem solid #e4e4e4;
+    font-size: 1rem;
     color: white;
     background-color: #602316;
     box-shadow:
@@ -364,8 +365,8 @@
     padding: 1rem;
     width: 100%;
     border-radius: 1rem;
-    border: 0.1rem solid #e4e4e4;
-    font-size: 1.2rem;
+    border: 0.05rem solid #e4e4e4;
+    font-size: 1rem;
     color: white;
     background-color: #391d18;
     box-shadow:
@@ -377,7 +378,7 @@
 
 .button-wrapper {
     display: flex;
-    gap: 1.6rem;
+    gap: 1rem;
     align-items: stretch;
     margin-top: 2rem;
 }
@@ -386,14 +387,14 @@
     width: 100%;
     border-collapse: collapse;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: left;
     margin-top: 1rem;
 }
 
 .usage-table th,
 .usage-table td {
-    padding: 1rem 1rem;
+    padding: .6rem;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -443,11 +444,12 @@
 
 /*SIDEBAR*/
 .sidebar {
+    position: fixed;
     width: 16rem;
     min-height: 100vh;
     color: white;
     padding: 4rem 0 4rem 2rem;
-    border-radius: 0 3rem 3rem 0 ;
+    border-radius: 0 3rem 3rem 0;
     border: 1px solid #ffffff;
     display: flex;
     flex-direction: column;
@@ -532,4 +534,157 @@
 .submenu-item:hover {
     color: white;
     background: rgba(255, 255, 255, 0.1);
+}
+
+/* POP UP CARD */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 9999;
+}
+
+.popup.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.popup-card {
+    position: relative;
+    background: #131316;
+    padding: 2rem;
+    border-radius: 1.6rem;
+    z-index: 2;
+}
+
+.popup-header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.popup-body {
+    margin: 2rem 0;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* TABLE */
+.table-card {
+    border-radius: 1.6rem;
+    border: .05rem solid rgb(161, 161, 161);
+    /* nanti ganti putih ya */
+}
+
+.table-card-header {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Nanti ganti Putih ya*/
+    padding: 1.2rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-card-header .value {
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.table-card .table {
+    border-collapse: collapse;
+    width: 100%;
+    border-top: 1px solid rgba(64, 64, 64, 0.2);
+    /* Nanti ganti Putih ya*/
+    overflow: hidden;
+}
+
+.table-card .table thead th {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: left;
+}
+
+.table-card .table th,
+.table-card .table td {
+    padding: .6rem 1.2rem;
+    border-bottom: 1px solid rgba(69, 69, 69, 0.1);
+    /* Nanti ganti Putih ya*/
+    border-right: 1px solid rgba(53, 53, 53, 0.1);
+    /* Nanti ganti Putih ya*/
+}
+
+.table th:last-child,
+.table td:last-child {
+    border-right: none;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+/* buat status nanti bisa di lihat ada apa aja, tinggal ganti wwarna aja */
+.light-green-status-btn {
+    width: 100%;
+    padding: .4rem;
+    border-radius: 3rem;
+    border: 0.05rem solid #e4e4e4;
+    font-size: .8rem;
+    background-color: rgba(113, 152, 81, 0.8);
+    color: white;
+}
+
+.dark-green-status-btn {
+    padding: .4rem;
+    border-radius: 3rem;
+    border: 0.05rem solid #e4e4e4;
+    font-size: .8rem;
+    background-color: rgba(98, 130, 72, 0.8);
+    color: white;
+    width: 100%;
+    box-shadow:
+        inset 0 2px 8px rgba(30, 30, 30, 0.2),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blue-type-btn {
+    width: 100%;
+    padding: .4rem;
+    border-radius: 3rem;
+    border: 0.05rem solid #e4e4e4;
+    font-size: .8rem;
+    background: rgba(49, 85, 205, 0.8);
+    color: white;
+}
+
+.yellow-type-btn {
+    width: 100%;
+    padding: .4rem;
+    border-radius: 3rem;
+    border: 0.05rem solid #e4e4e4;
+    font-size: .8rem;
+    background: rgba(192, 156, 47, 0.8);
+    color: white;
 }
