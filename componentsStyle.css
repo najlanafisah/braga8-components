@@ -661,7 +661,20 @@
     border-radius: 3rem;
     border: 0.05rem solid #e4e4e4;
     font-size: .8rem;
-    background-color: rgba(98, 130, 72, 0.8);
+    background-color: rgba(37, 82, 0, 0.8);
+    color: white;
+    width: 100%;
+    box-shadow:
+        inset 0 2px 8px rgba(0, 0, 0, 0.2),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-red-status-btn {
+    padding: .4rem;
+    border-radius: 3rem;
+    border: 0.05rem solid #e4e4e4;
+    font-size: .8rem;
+    background-color: rgba(124, 0, 0, 0.8);
     color: white;
     width: 100%;
     box-shadow:
