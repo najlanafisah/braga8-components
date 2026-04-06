@@ -701,3 +701,41 @@
     background: rgba(192, 156, 47, 0.8);
     color: white;
 }
+
+/* SEARCH BAR */
+.search-wrapper {
+    position: relative;
+}
+
+.search-wrapper input {
+    width: 30%;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(118, 36, 11, 0.6);
+    box-shadow:
+        0 8px 32px rgba(204, 129, 85, 0.4),
+        inset 0 3px 30px rgba(30, 30, 30, 0.4),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.search-wrapper input:focus {
+    outline: none;
+    box-shadow:
+        0 8px 32px rgba(204, 129, 85, 0.4),
+        inset 0 3px 30px rgba(30, 30, 30, 0.4),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.search-wrapper input::placeholder {
+    color: white;
+}
+
+.search-wrapper .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
