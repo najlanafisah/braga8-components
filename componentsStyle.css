@@ -328,7 +328,7 @@
     padding: 0 2rem;
     font-size: 1.4rem;
     color: rgba(255, 255, 255, 0.4);
-    text-shadow: 0 2px 4px rgbargba(196, 196, 196, 0.25)
+    text-shadow: 0 2px 4px rgba(196, 196, 196, 0.25)
 }
 
 .bar-chart-legend {
@@ -383,61 +383,162 @@
 }
 
 .usage-table {
-  width: 100%;
-  border-collapse: collapse;
-  color: white;
-  font-size: 1.4rem;
-  text-align: left;
-  margin-top: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    font-size: 1.4rem;
+    text-align: left;
+    margin-top: 1rem;
 }
 
 .usage-table th,
 .usage-table td {
-  padding: 1rem 1rem;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .usage-table th {
-  color: rgba(255, 255, 255, 0.8);
-  padding-bottom: 1.4rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 1.4rem;
 }
 
 .card-scroll {
-  flex: 1;
-  overflow-y: auto;
-  padding-right: 0.5rem;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(196, 196, 196, 0.6) transparent;
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(196, 196, 196, 0.6) transparent;
 }
 
 .card-scroll::-webkit-scrollbar {
-  width: 1rem;
+    width: 1rem;
 }
 
 .card-scroll::-webkit-scrollbar-track {
-  background: transparent;
+    background: transparent;
 }
 
 .card-scroll::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, 
-    rgba(120, 120, 120, 0.8), 
-    rgba(152, 152, 152, 0.4));
-  border-radius: 20px;
+    background: linear-gradient(to bottom,
+            rgba(120, 120, 120, 0.8),
+            rgba(152, 152, 152, 0.4));
+    border-radius: 20px;
 }
 
 .card-scroll::-webkit-scrollbar-thumb:hover {
-  background: #98989866;
+    background: #98989866;
 }
 
 .card-body {
-  width: 100%;
-  height: 100%;
-  max-height: 9rem;
-  display: flex;
-  flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-height: 9rem;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Opsional: efek hover pada row */
 .usage-table tr:hover {
-  background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/*SIDEBAR*/
+.sidebar {
+    width: 16rem;
+    min-height: 100vh;
+    color: white;
+    padding: 4rem 0 4rem 2rem;
+    border-radius: 0 3rem 3rem 0 ;
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg,
+            #1F0A00 0%,
+            #3D1200 22%,
+            #5C1A00 48%,
+            #8C2A00 72%,
+            #E05A00 100%);
+    box-shadow: 4px 0 25px rgba(169, 169, 169, 0.5);
+    position: relative;
+    overflow-y: auto;
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 65%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.sidebar-logo {
+    margin-bottom: 2rem;
+    z-index: 3;
+}
+
+.logo-image {
+    width: 6rem;
+    height: 6rem;
+}
+
+.sidebar-nav {
+    margin-right: 1rem;
+}
+
+.sidebar-title {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: underline;
+    margin-bottom: 3rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    z-index: 3;
+    padding: .6rem .6rem;
+}
+
+.menu-item:hover {
+    background: rgba(255, 138, 0, 0.18);
+}
+
+.menu-text {
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-icon {
+    font-size: 1.2rem;
+    width: 2rem;
+}
+
+.submenu {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 3;
+}
+
+.submenu-item {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: .4rem 1.6rem;
+    font-size: 0.97rem;
+    border-radius: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.submenu-item:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
 }
