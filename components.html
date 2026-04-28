@@ -213,83 +213,103 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
 
-        <!-- Logo -->
         <div class="sidebar-logo">
-            <img src="assets/braga8-logo.svg" alt="Braga8" class="logo-image">
+            <img src="assets/braga8-logo.svg" class="logo-image">
         </div>
 
         <h1 class="sidebar-title">Dashboard</h1>
 
         <nav class="sidebar-nav">
 
-            <a href="#" class="menu-item">
-                <span class="sidebar-icon">🏠</span>
-                <span class="menu-text">Tenant & Unit</span>
-            </a>
-            <div class="submenu">
-                <a href="#" class="submenu-item">Tenant List</a>
-                <a href="#" class="submenu-item">Unit List</a>
+            <div class="menu-group active">
+                <a href="#" class="menu-item">
+                    <span><i class="fa-solid fa-shop"></i></span>
+                    <span>Tenant & Unit</span>
+                </a>
+                <div class="submenu">
+                    <a href="#">Tenant List</a>
+                    <a href="#">Unit List</a>
+                </div>
             </div>
 
-            <a href="#" class="menu-item">
-                <span class="sidebar-icon">⚙️</span>
-                <span class="menu-text">Utilities</span>
-            </a>
-            <div class="submenu">
-                <a href="#" class="submenu-item">Meter Data</a>
-                <a href="#" class="submenu-item">Meter Readings</a>
+            <div class="menu-group">
+                <a href="#" class="menu-item">
+                    <span><i class="fa-solid fa-gear"></i></span>
+                    <span>Utilities</span>
+                </a>
+                <div class="submenu">
+                    <a href="#">Meter Data</a>
+                    <a href="#">Meter Readings</a>
+                </div>
             </div>
 
-            <a href="#" class="menu-item">
-                <span class="sidebar-icon">💰</span>
-                <span class="menu-text">Tarif & Billing</span>
-            </a>
-            <div class="submenu">
-                <a href="#" class="submenu-item">Tarif Setup</a>
-                <a href="#" class="submenu-item">Generate Tagihan</a>
-                <a href="#" class="submenu-item">Invoice</a>
+            <div class="menu-group">
+                <a href="#" class="menu-item">
+                    <span><i class="fa-solid fa-money-bill"></i></span>
+                    <span>Tarif & Billings</span>
+                </a>
+                <div class="submenu">
+                    <a href="#">Tarif Setup</a>
+                    <a href="#">Generate Tagihan</a>
+                    <a href="#">Invoice</a>
+                </div>
             </div>
 
-            <a href="#" class="menu-item">
-                <span class="sidebar-icon">💳</span>
-                <span class="menu-text">Payment</span>
-            </a>
-            <div class="submenu">
-                <a href="#" class="submenu-item">Payment Status</a>
-                <a href="#" class="submenu-item">Payment Logs</a>
+            <div class="menu-group">
+                <a href="#" class="menu-item">
+                    <span><i class="fa-solid fa-money-bill"></i></span>
+                    <span>Payment</span>
+                </a>
+                <div class="submenu">
+                    <a href="#">Payment Status</a>
+                    <a href="#">Payment Logs</a>
+                </div>
             </div>
 
-            <a href="#" class="menu-item">
-                <span class="sidebar-icon">📊</span>
-                <span class="menu-text">Reports</span>
-            </a>
-            <div class="submenu">
-                <a href="#" class="submenu-item">Usage Reports</a>
-                <a href="#" class="submenu-item">Export Data</a>
+            <div class="menu-group">
+                <a href="#" class="menu-item">
+                    <span><i class="fa-solid fa-list"></i></span>
+                    <span>Reports</span>
+                </a>
+                <div class="submenu">
+                    <a href="#">Usage Reports</a>
+                    <a href="#">Export data</a>
+                </div>
             </div>
 
-            <a href="#" class="menu-item">
-                <span class="sidebar-icon">⚠️</span>
-                <span class="menu-text">Complaints</span>
-            </a>
-            <div class="submenu">
-                <a href="#" class="submenu-item">Complaint List</a>
+            <div class="menu-group">
+                <a href="#" class="menu-item">
+                    <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+                    <span>Complaints</span>
+                </a>
+                <div class="submenu">
+                    <a href="#">Complaint List</a>
+                </div>
             </div>
 
-            <a href="#" class="menu-item">
-                <span class="sidebar-icon">👤</span>
-                <span class="menu-text">User Management</span>
-            </a>
-            <div class="submenu">
-                <a href="#" class="submenu-item">Audit Log</a>
+            <div class="menu-group">
+                <a href="#" class="menu-item">
+                    <span><i class="fa-solid fa-user"></i></span>
+                    <span>User Management</span>
+                </a>
             </div>
 
-            <a href="#" class="menu-item">
-                <span class="sidebar-icon">⚙️</span>
-                <span class="menu-text">Settings</span>
-            </a>
+            <div class="menu-group">
+                <a href="#" class="menu-item">
+                    <span><i class="fa-solid fa-money-bill"></i></span>
+                    <span>Audit Log</span>
+                </a>
+            </div>
+
+            <div class="menu-group">
+                <a href="#" class="menu-item">
+                    <span><i class="fa-solid fa-sliders"></i></span>
+                    <span>Settings</span>
+                </a>
+            </div>
 
         </nav>
+
     </aside>
 
     <!-- POP UP CARD -->
@@ -595,6 +615,22 @@
     </div>
 
     <script src="script.js"></script>
+
+    <script>
+        const groups = document.querySelectorAll('.menu-group');
+
+        groups.forEach(group => {
+            group.querySelector('.menu-item').addEventListener('click', (e) => {
+                e.preventDefault();
+
+                groups.forEach(g => {
+                    if (g !== group) g.classList.remove('active');
+                });
+
+                group.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
