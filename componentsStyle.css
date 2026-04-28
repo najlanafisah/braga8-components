@@ -16,7 +16,8 @@
 
 /* SUBTITLE */
 .subtitle-text {
-    font-size: 1rem;
+    font-size: 14px;
+    font-weight: 300;
     color: black;
     /* nanti ganti jadi white ya bentih, ini cuma biar keliatan aja*/
     opacity: 50%;
