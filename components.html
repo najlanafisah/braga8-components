@@ -639,22 +639,6 @@
     </div>
 
     <script src="script.js"></script>
-
-    <script>
-        const groups = document.querySelectorAll('.menu-group');
-
-        groups.forEach(group => {
-            group.querySelector('.menu-item').addEventListener('click', (e) => {
-                e.preventDefault();
-
-                groups.forEach(g => {
-                    if (g !== group) g.classList.remove('active');
-                });
-
-                group.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 
 </html>
