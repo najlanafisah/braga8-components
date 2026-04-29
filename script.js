@@ -1,10 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  console.log("JS MASUK");
+  const groups = document.querySelectorAll('.menu-group');
 
-  // ======================
-  // PIE CHART
-  // ======================
+  groups.forEach(group => {
+    const menu = group.querySelector('.menu-item');
+
+    if (!menu) return;
+
+    menu.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      groups.forEach(g => {
+        if (g !== group) g.classList.remove('active');
+      });
+
+      group.classList.toggle('active');
+    });
+  });
+
   const billData = {
     paid: 65,
     unpaid: 25,
@@ -15,10 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const { paid, unpaid, overdue } = billData;
 
     const chart = document.getElementById("chart");
-    if (!chart) {
-      console.log("PIE CHART GA KETEMU");
-      return;
-    }
+    if (!chart) return;
 
     chart.style.background = `
       conic-gradient(
@@ -39,88 +49,82 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateChart();
 
-  // ======================
-  // BAR CHART
-  // ======================
   const data = [
     { month: "Jan", electricity: 80, water: 50 },
     { month: "Feb", electricity: 40, water: 70 },
     { month: "Mar", electricity: 75, water: 70 },
-    { month: "April", electricity: 15, water: 8 }
+    { month: "Apr", electricity: 15, water: 8 }
   ];
 
   const barsContainer = document.getElementById("chart-bars");
   const labelsContainer = document.getElementById("chart-labels");
 
-  if (!barsContainer || !labelsContainer) {
-    console.log("ELEMENT BAR CHART GA KETEMU");
-    return;
+  if (barsContainer && labelsContainer) {
+
+    const values = [];
+    data.forEach(d => values.push(d.electricity, d.water));
+
+    const maxValue = Math.max(...values);
+
+    data.forEach(item => {
+
+      const group = document.createElement("div");
+      group.className = "bar-chart-group";
+
+      const eBar = document.createElement("div");
+      eBar.className = "bar-chart-bar bar-chart-bar-electricity";
+
+      const wBar = document.createElement("div");
+      wBar.className = "bar-chart-bar bar-chart-bar-water";
+
+      const chartHeight = 100;
+
+      eBar.style.height = (item.electricity / maxValue) * chartHeight + "px";
+      wBar.style.height = (item.water / maxValue) * chartHeight + "px";
+
+      group.appendChild(eBar);
+      group.appendChild(wBar);
+      barsContainer.appendChild(group);
+
+      const label = document.createElement("div");
+      label.textContent = item.month;
+      labelsContainer.appendChild(label);
+    });
   }
 
-  const values = [];
-  data.forEach(d => {
-    values.push(d.electricity, d.water);
+    const popups = document.querySelectorAll(".popup");
+
+  // OPEN POPUP
+  document.querySelectorAll("[data-popup]").forEach(trigger => {
+    trigger.addEventListener("click", () => {
+
+      const target = trigger.getAttribute("data-popup");
+      const popup = document.getElementById(target);
+
+      if (popup) {
+        popup.classList.add("active");
+      }
+
+    });
   });
 
-  const maxValue = Math.max(...values);
+  // CLOSE POPUP
+  popups.forEach(popup => {
 
-  if (!maxValue) {
-    console.log("MAX VALUE ERROR");
-    return;
-  }
+    const closeBtn = popup.querySelector(".popup-close");
+    const overlay = popup.querySelector(".popup-overlay");
 
-  data.forEach(item => {
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        popup.classList.remove("active");
+      });
+    }
 
-    const group = document.createElement("div");
-    group.className = "bar-chart-group";
+    if (overlay) {
+      overlay.addEventListener("click", () => {
+        popup.classList.remove("active");
+      });
+    }
 
-    const eBar = document.createElement("div");
-    eBar.className = "bar-chart-bar bar-chart-bar-electricity";
-
-    const wBar = document.createElement("div");
-    wBar.className = "bar-chart-bar bar-chart-bar-water";
-
-    const chartHeight = 160;
-
-    eBar.style.height = (item.electricity / maxValue) * chartHeight + "px";
-    wBar.style.height = (item.water / maxValue) * chartHeight + "px";
-
-    group.appendChild(eBar);
-    group.appendChild(wBar);
-    barsContainer.appendChild(group);
-
-    const label = document.createElement("div");
-    label.textContent = item.month;
-    labelsContainer.appendChild(label);
   });
-
-  // ======================
-  // POPUP
-  // ======================
-  const popup = document.querySelector(".popup");
-  const openBtn = document.querySelector(".open-popup"); // tombol trigger
-  const closeBtn = document.querySelector(".popup-close");
-  const overlay = document.querySelector(".popup-overlay");
-
-  // buka popup
-  if (openBtn && popup) {
-    openBtn.addEventListener("click", () => {
-      popup.classList.add("active");
-    });
-  }
-
-  // tutup popup (X)
-  if (closeBtn && popup) {
-    closeBtn.addEventListener("click", () => {
-      popup.classList.remove("active");
-    });
-  }
-
-  // tutup popup (klik overlay)
-  if (overlay && popup) {
-    overlay.addEventListener("click", () => {
-      popup.classList.remove("active");
-    });
-  }
-
 });
