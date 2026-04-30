@@ -315,33 +315,18 @@
     <!-- POP UP CARD -->
 
     <!-- Pop Up 1 -->
-    <div class="popup" id="profile-popup">
+    <div class="popup" id="detail-profile-popup">
         <div class="popup-overlay"></div>
 
-        <div class="popup-card">
-            <button class="popup-close">&times;</button>
-
-            <div class="popup-header">Profile</div>
-            <div class="popup-body">
-                <div class="container">
-                    <!-- email -->
-                    <div class="text-field">
-                        <label class="text-field-label">Email</label>
-                        <input type="email" class="text-field-input" placeholder="your@email.com">
-                    </div>
-
-                    <!-- password -->
-                    <div class="text-field">
-                        <label class="text-field-label">Password</label>
-                        <input type="password" class="text-field-input" placeholder="••••••••">
-                    </div>
-
-                    <!-- text biasa -->
-                    <div class="text-field">
-                        <label class="text-field-label">Full Name</label>
-                        <input type="text" class="text-field-input" placeholder="full name">
-                    </div>
-                </div>
+        <div class="popup-card popup-md">
+            <div class="popup-close-wrapper">
+                <button class="popup-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="popup-header">Account Details</div>
+            <div class="popup-body user-account-info">
+                <p>halooo ini user account</p>
             </div>
         </div>
     </div>
@@ -350,18 +335,22 @@
     <div class="popup" id="notif-popup">
         <div class="popup-overlay"></div>
 
-        <div class="popup-card">
-            <button class="popup-close">&times;</button>
+        <div class="popup-card popup-md">
+            <div class="popup-close-wrapper">
+                <button class="popup-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
 
             <div class="popup-header">Notifications</div>
             <div class="popup-body">
-                <p style="color:white;">No new notifications</p>
+                <p>haloo ini nootif</p>
             </div>
         </div>
     </div>
 
     <!-- BUTTON BUAT BUKKA POP UP (NANTI PAKE CLASS INI YA KLO MAU POPUP) -->
-    <button data-popup="profile-popup">Pop Up Card Button 1</button>
+    <button data-popup="detail-profile-popup">Pop Up Card Button 1</button>
     <!-- ini tinggal di ganti2 aja sesuain smaa namanya di id-->
 
     <button data-popup="notif-popup">Pop Up Card Button 2</button>
