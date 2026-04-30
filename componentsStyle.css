@@ -621,115 +621,127 @@
 }
 
 /* TABLE */
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .table-card {
-    border-radius: 1.6rem;
-    border: .05rem solid rgb(161, 161, 161);
-    /* nanti ganti putih ya */
+    border-radius: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .table-card-header {
-    background-color: rgba(0, 0, 0, 0.2);
-    /* Nanti ganti Putih ya*/
-    padding: 1.2rem;
-    border-radius: 1.5rem 1.5rem 0 0;
-    font-size: 1.2rem;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem 1.2rem;
+    border-radius: 1rem 1rem 0 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
     display: flex;
     justify-content: space-between;
 }
 
+.table-card-header .table-card-meta {
+    font-size: 14px;
+}
+
 .table-card-header .value {
-    font-weight: 700;
-    margin-left: 1rem;
+    font-weight: 600;
+    margin-left: 10px;
 }
 
 .table-card .table {
     border-collapse: collapse;
     width: 100%;
-    border-top: 1px solid rgba(64, 64, 64, 0.2);
-    /* Nanti ganti Putih ya*/
     overflow: hidden;
+    border: none;
 }
 
 .table-card .table thead th {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    text-align: left;
+}
+
+.table-card .table tbody td {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
     text-align: left;
 }
 
 .table-card .table th,
 .table-card .table td {
-    padding: .6rem 1.2rem;
-    border-bottom: 1px solid rgba(69, 69, 69, 0.1);
-    /* Nanti ganti Putih ya*/
-    border-right: 1px solid rgba(53, 53, 53, 0.1);
-    /* Nanti ganti Putih ya*/
+    padding: 10px 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.table th:last-child,
-.table td:last-child {
-    border-right: none;
+.table-card .table td+td,
+.table-card .table th+th {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.table tr:last-child td {
-    border-bottom: none;
+.table tbody tr:last-child:hover td:first-child {
+    border-bottom-left-radius: 1rem;
 }
 
-/* buat status nanti bisa di lihat ada apa aja, tinggal ganti wwarna aja */
-.light-green-status-btn {
-    width: 100%;
-    padding: .4rem;
-    border-radius: 3rem;
-    border: 0.05rem solid #e4e4e4;
-    font-size: .8rem;
-    background-color: rgba(113, 152, 81, 0.8);
-    color: white;
+.table tbody tr:last-child:hover td:last-child {
+    border-bottom-right-radius: 1rem;
 }
 
-.dark-green-status-btn {
-    padding: .4rem;
-    border-radius: 3rem;
-    border: 0.05rem solid #e4e4e4;
-    font-size: .8rem;
-    background-color: rgba(37, 82, 0, 0.8);
-    color: white;
-    width: 100%;
+.table td.actions {
+    min-width: 16rem;
+}
+
+.table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.actions {
+    display: flex;
+    gap: 6px;
+}
+
+/* ACTION BTN */
+.dark-brown-btn-action {
+    background-color: #391d18;
     box-shadow:
-        inset 0 2px 8px rgba(0, 0, 0, 0.2),
-        inset 0 -3px 10px rgba(0, 0, 0, 0.2);
+        0 8px 32px rgba(176, 75, 41, 0.3),
+        inset 0 2px 8px rgba(30, 30, 30, 0.4),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.4);
 }
 
-.dark-red-status-btn {
-    padding: .4rem;
-    border-radius: 3rem;
-    border: 0.05rem solid #e4e4e4;
-    font-size: .8rem;
-    background-color: rgba(124, 0, 0, 0.8);
-    color: white;
-    width: 100%;
+.light-brown-btn-action {
+    background-color: #602316;
     box-shadow:
-        inset 0 2px 8px rgba(30, 30, 30, 0.2),
-        inset 0 -3px 10px rgba(0, 0, 0, 0.2);
+        0 8px 32px rgba(176, 75, 41, 0.3),
+        inset 0 2px 8px rgba(30, 30, 30, 0.4),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.4);
 }
 
-.blue-type-btn {
-    width: 100%;
-    padding: .4rem;
-    border-radius: 3rem;
-    border: 0.05rem solid #e4e4e4;
-    font-size: .8rem;
-    background: rgba(49, 85, 205, 0.8);
-    color: white;
+.light-green-btn-action {
+    background-color: #372c19;
+    box-shadow:
+        0 8px 32px rgba(92, 105, 41, 0.3),
+        inset 0 2px 8px rgba(30, 30, 30, 0.4),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.4);
 }
 
-.yellow-type-btn {
+.dark-brown-btn-action,
+.light-brown-btn-action,
+.light-green-btn-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: .4rem;
+    gap: 6px;
+    padding: 4px 10px;
     border-radius: 3rem;
-    border: 0.05rem solid #e4e4e4;
-    font-size: .8rem;
-    background: rgba(192, 156, 47, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 10px;
     color: white;
+    cursor: pointer;
 }
 
 /* SEARCH BAR */

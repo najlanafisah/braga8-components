@@ -356,269 +356,107 @@
     <button data-popup="notif-popup">Pop Up Card Button 2</button>
 
     <!-- TABLE -->
-    <div class="table-card">
+    <div class="table-wrapper">
+        <div class="table-card">
+            <div class="table-card-header">
+                <div class="table-card-title">
+                    <span class="label">Tenant:</span>
+                    <span class="value">Burger Bangor</span>
+                </div>
 
-        <div class="table-card-header">
-            <div class="table-card-title">
-                <span class="label">Tenant:</span>
-                <span class="value">Burger Bangor</span>
+                <div class="table-card-meta">
+                    2 Units
+                </div>
             </div>
 
-            <div class="table-card-meta">
-                2 Units
-            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Electricity Cost</th>
+                        <th>Water Cost</th>
+                        <th>Electric Load Cost</th>
+                        <th>Maintanence</th>
+                        <th>Admin Fee</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Rp 300,000</td>
+                        <td>Rp 300,000</td>
+                        <td>Rp 30,000</td>
+                        <td>Rp 30,000</td>
+                        <td>Rp 30,000</td>
+                        <td class="actions">
+                            <button class="dark-brown-btn-action">
+                                <span><i class="fa-solid fa-eye"></i></span>
+                                <span>View</span>
+                            </button>
+                            <button class="light-brown-btn-action">
+                                <span><i class="fa-solid fa-pen"></i></span>
+                                <span>Edit</span>
+                            </button>
+                            <button class="light-green-btn-action">
+                                <span><i class="fa-solid fa-trash"></i></span>
+                                <span>Delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
+        <div class="table-card">
+            <div class="table-card-header">
+                <div class="table-card-title">
+                    <span class="label">Tenant:</span>
+                    <span class="value">Solaria</span>
+                </div>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Unit</th>
-                    <th>Floor</th>
-                    <th>Area Size (m2)</th>
-                    <th>Status</th>
-                    <th>Lease Start</th>
-                    <th>Lease End</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>2A</td>
-                    <td>2</td>
-                    <td>2.00</td>
-                    <td>
-                        <button class="light-green-status-btn">Active</button>
-                    </td>
-                    <td>2/26/2026</td>
-                    <td>2/26/2027</td>
-                    <td>(Action Buttons)</td> <!-- ini nanit diisi sama btn action yang dibikin sama ekkin-->
-                </tr>
-                <tr>
-                    <td>2A</td>
-                    <td>2</td>
-                    <td>2.00</td>
-                    <td>
-                        <button class="light-green-status-btn">Active</button>
-                    </td>
-                    <td>2/26/2026</td>
-                    <td>2/26/2027</td>
-                    <td>(Action Buttons)</td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    <div class="table-card">
-
-        <div class="table-card-header">
-            <div class="table-card-title">
-                <span class="label">Tenant:</span>
-                <span class="value">Burger Bangor</span>
+                <div class="table-card-meta">
+                    3 Units
+                </div>
             </div>
 
-            <div class="table-card-meta">
-                2 Units
-            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Electricity Cost</th>
+                        <th>Water Cost</th>
+                        <th>Electric Load Cost</th>
+                        <th>Maintanence</th>
+                        <th>Admin Fee</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Rp 300,000</td>
+                        <td>Rp 300,000</td>
+                        <td>Rp 30,000</td>
+                        <td>Rp 30,000</td>
+                        <td>Rp 30,000</td>
+                        <td class="actions">
+                            <button class="dark-brown-btn-action">
+                                <span><i class="fa-solid fa-eye"></i></span>
+                                <span>View</span>
+                            </button>
+                            <button class="light-brown-btn-action">
+                                <span><i class="fa-solid fa-pen"></i></span>
+                                <span>Edit</span>
+                            </button>
+                            <button class="light-green-btn-action">
+                                <span><i class="fa-solid fa-trash"></i></span>
+                                <span>Delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Unit</th>
-                    <th>Meter Number</th>
-                    <th>AType</th>
-                    <th>Capacity</th>
-                    <th>Tariff Type</th>
-                    <th>Meter Category</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>2A</td>
-                    <td>12</td>
-                    <td>
-                        <button class="blue-type-btn">Water</button>
-                    </td>
-                    <td>200 KHW</td>
-                    <td>Normal</td>
-                    <td>Pascabayar</td>
-                    <td>(Action Buttons)</td> <!-- ini nanit diisi sama btn action yang dibikin sama ekkin-->
-                </tr>
-                <tr>
-                    <td>2A</td>
-                    <td>12</td>
-                    <td>
-                        <button class="yellow-type-btn">Electricity</button>
-                    </td>
-                    <td>2000 L</td>
-                    <td>Normal</td>
-                    <td>Pascabayar</td>
-                    <td>(Action Buttons)</td> <!-- ini nanit diisi sama btn action yang dibikin sama ekkin-->
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    <div class="table-card">
-
-        <div class="table-card-header">
-            <div class="table-card-title">
-                <span class="label">Tenant:</span>
-                <span class="value">Burger Bangor</span>
-            </div>
-
-            <div class="table-card-meta">
-                2 Units
-            </div>
-        </div>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Invoice No</th>
-                    <th>Unit</th>
-                    <th>Total</th>
-                    <th>Month</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>INV-1771741827</td>
-                    <td>2A</td>
-                    <td>Rp 1300,000</td>
-                    <td>January 2026</td>
-                    <td>
-                        <button class="dark-green-status-btn">✓ Send to Tenant</button>
-                    </td>
-                    <td>(Action Buttons)</td> <!-- ini nanit diisi sama btn action yang dibikin sama ekkin-->
-                </tr>
-                <tr>
-                    <td>INV-1771741827</td>
-                    <td>2A</td>
-                    <td>Rp 1300,000</td>
-                    <td>January 2026</td>
-                    <td>
-                        <button class="dark-red-status-btn">Not Sended</button>
-                    </td>
-                    <td>(Action Buttons)</td> <!-- ini nanit diisi sama btn action yang dibikin sama ekkin-->
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    <div class="table-card">
-
-        <div class="table-card-header">
-            <div class="table-card-title">
-                <span class="label">Admin Users</span>
-            </div>
-
-            <div class="table-card-meta">
-                2 Users
-            </div>
-        </div>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Quaneisha</td>
-                    <td>@Quaneisha</td>
-                    <td>quan@gmail.com</td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    <div class="table-card">
-
-        <div class="table-card-header">
-            <div class="table-card-title">
-                <span class="value">History</span>
-            </div>
-        </div>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Name</th>
-                    <th>Role</th>
-                    <th>Activity</th>
-                    <th>Done At</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Quaneisha</td>
-                    <td>Admin</td>
-                    <td>Edit User ‘Jimmy’ Information</td>
-                    <td>8 PM 3/10/2026</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Quaneisha</td>
-                    <td>Admin</td>
-                    <td>Edit User ‘Jimmy’ Information</td>
-                    <td>8 PM 3/10/2026</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Quaneisha</td>
-                    <td>Admin</td>
-                    <td>Edit User ‘Jimmy’ Information</td>
-                    <td>8 PM 3/10/2026</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Quaneisha</td>
-                    <td>Admin</td>
-                    <td>Edit User ‘Jimmy’ Information</td>
-                    <td>8 PM 3/10/2026</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Quaneisha</td>
-                    <td>Admin</td>
-                    <td>Edit User ‘Jimmy’ Information</td>
-                    <td>8 PM 3/10/2026</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Quaneisha</td>
-                    <td>Admin</td>
-                    <td>Edit User ‘Jimmy’ Information</td>
-                    <td>8 PM 3/10/2026</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Quaneisha</td>
-                    <td>Admin</td>
-                    <td>Edit User ‘Jimmy’ Information</td>
-                    <td>8 PM 3/10/2026</td>
-                </tr>
-            </tbody>
-        </table>
-
     </div>
 
     <!-- SEARCH BAR -->
